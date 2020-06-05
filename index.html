@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link href="https://fonts.googleapis.com/css2?family=Exo&family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<div id="overlay"></div>
+
+	<h1>Todo~List</h1>
+	
+	<hr>
+
+	<div id='container'>
+
+		<div id="left-end">
+			<div id='project-container'></div>
+			<input type="text" id="add-project" placeholder="Add Project">
+			<button id="submit-project">Add</button>
+		</div>
+
+		<div id="todo-content">
+			<div id='current-project'></div>
+			<div id='todo-container'></div>
+		</div>
+		<button id="add-todo">Add Todo</button>
+
+		<div id="todo-form">
+			<button id="exit">X</button>
+			<label for="user-title">Title:</label>
+			<input type="text" placeholder="Title" id="user-title">
+			<label for="user-description">Description:</label>
+			<textarea placeholder="Description" id="user-description"></textarea>
+			<label for="user-date">Date:</label>
+			<input type="date" placeholder="Date" id="user-date">
+			<label for="set-priority">Priority:</label>
+			<input type="checkbox" id="set-priority">
+			<button id="submit-todo">Add</button>
+		</div>
+
+		<div id="todo-info">
+			
+			<h5>Title:</h5>
+			<span id="title-info"></span>
+			<h5>Date Due:</h5>
+			<span id="due-date"></span>
+			<h5>Description:</h5>
+			<p id="desc-info"></p>
+			<button id="exit-todo-info">Exit</button>
+
+		</div>
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
