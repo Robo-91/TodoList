@@ -144,19 +144,32 @@ function displayOverlayOff() {
 	overlay.style.display = 'none';
 }
 
+// Toggle form animations
+function formFadeIn(form) {
+	form.classList.remove('leave');
+	form.classList.add('enter');
+}
+
+function formFadeOut(form) {
+	form.classList.remove('enter');
+	form.classList.add('leave');
+}
+
 addForm.addEventListener('click', () => {
 	displayOverlayOn();
+	formFadeIn(todoForm);
 	todoForm.style.display = 'grid';
-	addForm.style.display = 'none';
 });
 
 // exit add todo form
 const exitForm = document.getElementById('exit');
 
 exitForm.addEventListener('click', () => {
-	displayOverlayOff();
-	todoForm.style.display = 'none';
-	addForm.style.display = 'block';
+	formFadeOut(todoForm);
+	setTimeout(function() {
+		todoForm.style.display = 'none';
+		displayOverlayOff();
+	}, 500);
 });
 
 // display todo info
@@ -175,6 +188,7 @@ todoContainer.addEventListener('click', function(e) {
 		const targetTodo = targetProject.list.find(function(todo){
 			return todo.title === e.target.textContent;
 		});
+		formFadeIn(todoInfo);
 		titleInfo.textContent = targetTodo.title;
 		dateInfo.textContent = targetTodo.dueDate;
 		descInfo.textContent = targetTodo.description;
@@ -188,6 +202,9 @@ todoContainer.addEventListener('click', function(e) {
 const exitTodoInfo = document.getElementById('exit-todo-info');
 
 exitTodoInfo.addEventListener('click', () => {
-	displayOverlayOff();
-	todoInfo.style.display = 'none';
+	formFadeOut(todoInfo);
+	setTimeout(function() {
+		todoInfo.style.display = 'none';
+		displayOverlayOff();
+	}, 500);
 });
