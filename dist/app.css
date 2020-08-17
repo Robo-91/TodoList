@@ -42,6 +42,7 @@ body {
 	flex: 30%;
 	color: red;
 	background-color: white;
+	cursor: pointer;
 }
 
 #project-container button:hover {
@@ -57,6 +58,7 @@ body {
 	border-radius: 7px;
 	color: red;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .delete:hover {
@@ -74,6 +76,7 @@ body {
 	border-radius: 7px;
 	padding: 5px;
 	border: none;
+	cursor: pointer;
 }
 
 .delete-todo:hover {
@@ -98,6 +101,7 @@ body {
 	justify-content: space-around;
 	padding: 8px;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 #todo-container div:hover {
@@ -109,6 +113,7 @@ body {
 	font-size: 20px;
 	text-decoration: underline;
 	color: red;
+	cursor: pointer;
 }
 
 #todo-form {
@@ -172,6 +177,7 @@ body {
 	font-size: 18px;
 	border-radius: 10px;
 	background-color: white;
+	cursor: pointer;
 }
 
 #exit:hover {
@@ -187,6 +193,7 @@ body {
 	background-color: white;
 	color: red;
 	justify-self: center;
+	cursor: pointer;
 }
 
 #submit-todo:hover {
@@ -240,6 +247,7 @@ label:nth-of-type(4) {
 	background: white;
 	border-radius: 10px;
 	font-family: 'Exo', sans-serif;
+	cursor: pointer;
 }
 
 #add-todo:hover {
@@ -266,6 +274,7 @@ label:nth-of-type(4) {
 	font-size: 18px;
 	font-family: 'Exo', sans-serif;
 	color: red;
+	cursor: pointer;
 }
 
 #submit-project:hover {
@@ -367,4 +376,8 @@ h5:nth-of-type(3) {
 #exit-todo-info:hover {
 	background-color: #f7cbcb;
 	transition: .5s;
+}
+
+.priority {
+	background-color: yellow;
 }
