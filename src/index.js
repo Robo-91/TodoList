@@ -14,7 +14,6 @@ const addProjectText = document.getElementById('add-project');
 const submitProject = document.getElementById('submit-project');
 const todoForm = document.getElementById('todo-form');
 
-
 // DOM logic
 
 renderProjects();
@@ -101,7 +100,12 @@ submitTodo.addEventListener('click', () => {
 	}
 	 
 	todoContainer.innerHTML = ``;
-	const userInputTodo = new Todo(userTitle.value, userDescription.value, userDate.value, setPriority.value);
+	const userInputTodo = new Todo(userTitle.value, userDescription.value, userDate.value, setPriority.checked);
+	if (setPriority.checked) {
+		userInputTodo.priority = true;
+	} else {
+		userInputTodo.priority = false;
+	}
 	const targetProject = projects.find(function(project){
 		return project.name === currentProject.textContent;
 	});
@@ -114,6 +118,7 @@ submitTodo.addEventListener('click', () => {
 	userDescription.value = '';
 	userDate.value = '';
 	setPriority.checked = false;
+
 
 });
 
