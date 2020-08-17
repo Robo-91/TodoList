@@ -11,8 +11,12 @@ export const renderTodos = (curProject) => {
 
 	curProject.list.forEach((todo, id) => {
 		const todoTitle = document.createElement('div');
-		todoTitle.textContent = todo.title;
-		todoTitle.className = id;
+		todoTitle.textContent = todo.priority === true ? `!!! ${todo.title}` : todo.title;
+		todoTitle.className = `todo ${id}`;
+
+		if(todo.priority === true) { 
+			todoTitle.classList.add('priority');
+		}
 
 		const deleteTodo = document.createElement('input');
 		deleteTodo.className = `delete-todo`;
