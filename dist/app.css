@@ -278,13 +278,15 @@ label:nth-of-type(4) {
 }
 
 #submit-project:hover {
-	background: #f7cbcb;
+	color: white;
+	background: #25db1f;
 	transition: .5s;
 }
 
 #left-end {
-	height: 900px;
-	padding-top: 30px;
+	height: auto;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 	padding-left: 35px;
 	background-color: #e6e6e6;
 	padding-right: 15px;
@@ -381,4 +383,12 @@ h5:nth-of-type(3) {
 
 .priority {
 	background-color: yellow;
+}
+.complete h5{
+	text-decoration: none;
+}
+
+.complete {
+	text-decoration: line-through;
+	text-decoration-color: green;
 }
