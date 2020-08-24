@@ -8,7 +8,7 @@ import { renderProjects } from './projectDom.js';
 import { projectContainer } from './projectDom.js';
 import { todoContainer } from './todoDom.js';
 import { renderTodos } from './todoDom.js';
-const overlay = document.getElementById('overlay');
+import { overlay, displayOverlayOn, displayOverlayOff, formFadeIn, formFadeOut } from './overlay.js';
 const addForm = document.getElementById('add-todo');
 const addProjectText = document.getElementById('add-project');
 const submitProject = document.getElementById('submit-project');
@@ -21,9 +21,7 @@ renderProjects();
 // Render Todo's for clicked Project
 projectContainer.addEventListener('click', (e) => {
 
-	if(e.target.id === 'project-container') {
-		return null;
-	}
+	if(e.target.id === 'project-container') { return null; }
 
 	const deleteBtn = document.createElement('input');
 	deleteBtn.className = 'delete';
@@ -40,12 +38,9 @@ projectContainer.addEventListener('click', (e) => {
 });
 
 // Remove current Project and its todo's
-
 currentProject.addEventListener('click', (e) => {
 
-	if(e.target.className !== 'delete') {
-		return null;
-	}
+	if(e.target.className !== 'delete') { return null; }
 
 	const confirmDelete = prompt(`Are you sure you want to remove the project '${currentProject.textContent}'?`);
 	let userAnswer = confirmDelete === null ? null : confirmDelete.toLowerCase();
@@ -67,13 +62,10 @@ currentProject.addEventListener('click', (e) => {
 
 });
 
-// Add Project
-
+//Add Project
 submitProject.addEventListener('click', () => {
 
-	if(addProjectText.value === '') {
-		return null;
-	}
+	if(addProjectText.value === '') { return null; }
 
 	const userInputProject = new Project(addProjectText.value);
 	addProject(userInputProject);
@@ -84,7 +76,6 @@ submitProject.addEventListener('click', () => {
 });
 
 // Add Todo
-
 const userTitle = document.getElementById('user-title');
 const userDescription = document.getElementById('user-description');
 const userDate = document.getElementById('user-date');
@@ -123,10 +114,8 @@ submitTodo.addEventListener('click', () => {
 });
 
 // Remove Todo
-
 todoContainer.addEventListener('click', (e) => {
 
-	
 	if (e.target.className === 'delete-todo') {
 		const targetProject = projects.find(function(project){
 			return project.name === currentProject.textContent;
@@ -140,26 +129,6 @@ todoContainer.addEventListener('click', (e) => {
 });
 
 // Popup list for adding todo
-// Getting Overlay when Todo form is displayed
-function displayOverlayOn() {
-	overlay.style.display = 'block';
-}
-
-function displayOverlayOff() {
-	overlay.style.display = 'none';
-}
-
-// Toggle form animations
-function formFadeIn(form) {
-	form.classList.remove('leave');
-	form.classList.add('enter');
-}
-
-function formFadeOut(form) {
-	form.classList.remove('enter');
-	form.classList.add('leave');
-}
-
 addForm.addEventListener('click', () => {
 	displayOverlayOn();
 	formFadeIn(todoForm);
