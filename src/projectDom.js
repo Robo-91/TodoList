@@ -10,4 +10,4 @@ export const renderProjects = () => {
 		title.textContent = project.name;
 		projectContainer.appendChild(title);
 	});
-}	
+}

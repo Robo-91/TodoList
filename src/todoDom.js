@@ -11,7 +11,7 @@ export const renderTodos = (curProject) => {
 
 	curProject.list.forEach((todo, id) => {
 		const todoTitle = document.createElement('div');
-		todoTitle.textContent = todo.priority === true ? `!!! ${todo.title}` : todo.title;
+		todoTitle.textContent = todo.title;
 		todoTitle.className = `todo ${id}`;
 
 		if(todo.priority === true) { 
