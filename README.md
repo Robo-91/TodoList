@@ -33,14 +33,15 @@ To-do list:
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
+Ensure that you have a Text Editor Installed (Visual Studio Code, Sublime Text Editor).
+If using a windows machine, ensure that you have git bash installed.
+Ensure that you have Nodejs installed (for webpack)
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+using the terminal/command prompt, navigate to the directory that you want to clone your repository in, and enter the following command:
+> git clone https://github.com/Robo-91/TodoList.git
 
-- All the `code` required to get started
-- Images of what it should look like
+To switch branches, enter the following command:
+> git switch (name of branch here)
 
 ## Usage
 
