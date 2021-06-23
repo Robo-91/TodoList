@@ -1,12 +1,14 @@
 View this webpage: https://robo-91.github.io/TodoList//
 
-# PROJECT NAME
+# Todo List
 
 ## Project Description
 
 I created this webpage for learning purposes only, and is my own implementation. It is part of the free Odin Project curriculum.
 
 The purpose for implementing this project was to further my knowledge of some of the different concepts in Object-oriented programming, such as the Single Resonsibility Principle and loosely-coupled objects.
+
+The application allows the user to create projects that are used to organize all todo's.
 
 ## Technologies Used
 
@@ -17,13 +19,19 @@ The purpose for implementing this project was to further my knowledge of some of
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Use of Webpack to organize .js files according to each functional part of the application.
+* Use of Class syntax to create project, todo, and other objects.
+* Flexbox feature is used to design the layout of the application.
+* Projects are used to organize each todo, and each todo is unique to its own project.
+* User is able to add and delete projects and todo's.
+* Application is Responsive.
+* User is able to view details for created todo's.
+* Implementation of animations using CSS.
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Enhance the page design.
+* Allow the user to update projects/todo's.
+* Implement storage mechanism (localStorage or a Baas such as Firebase)
 
 ## Getting Started
    
@@ -39,10 +47,6 @@ To-do list:
 ## Usage
 
 > Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-## Contributors
-
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
 
 ## License
 
